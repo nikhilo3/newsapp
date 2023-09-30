@@ -55,7 +55,7 @@ app.post('/registration', async (req, res) => {
       const existingUser = await registrationform.findOne({ email });
   
       if (existingUser) {
-        return res.status(400).json({ message: 'Email is already registered' });
+        return res.status(200).json({ message: 'Email is already registered' });
       }
   
       const newUser = new registrationform({ name, email, password });
@@ -64,14 +64,11 @@ app.post('/registration', async (req, res) => {
       res.status(200).json({ message: 'Registration successful' });
     } catch (err) {
         console.error('Error during registration:', err);
-        res.status(500).json({ message: 'Registration failed' });
+        res.status(200).json({ message: 'Registration failed' });
     }
   });
  
-  
-app.get("/login",cors(),(req,res)=>{
 
-})
 
 app.post('/login',async (req,res)=>{
     const {email,password}=req.body
@@ -83,8 +80,8 @@ app.post('/login',async (req,res)=>{
         if (check && check.password === password) {
               console.log('Login successful');
             //   res.redirect('/general');
-            // res.json("exist")
-            // res.json({ status: 'success' });
+            res.json({ status: 'success' });
+            res.status(200).json({ message: 'login successful' });
         } else {
             console.log('Login failed');
             // res.send('wrong details');

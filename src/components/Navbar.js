@@ -2,8 +2,28 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 function Navbar()  {
-
+        
     return (
+      <>
+      <style>
+          {`
+            .btnl {
+              background-color: #f00;
+              color: red;
+              padding: 10px 20px;
+              margin-left: 10px;
+              border: none;
+              cursor: pointer;
+              transition: background-color 0.3s ease-in-out;
+              border-radius: 5px;
+              
+          }
+  
+          .btnl:hover {
+              background-color: #c00;
+          }
+          `}
+        </style>
       <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
         <div className='container-fluid'>
           <Link className="navbar-brand" to="/">Newsmonkey</Link>
@@ -31,11 +51,16 @@ function Navbar()  {
               <li className="nav-item">
                 <Link className="nav-link" to="/technology">technology</Link>
               </li>
+              
+              {/* <Link className="btnl" to="/" style={{ textDecoration: 'none', color: 'white' , marginLeft:'750px'}}>Logout</Link> */}
+              
             </ul>
           </div>
         </div>
       </nav>
+      </>
     );
+    
 }
 
 export default Navbar;

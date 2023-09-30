@@ -112,7 +112,7 @@ function Login(props){
                     <input className="form-check-input" type="checkbox" value="" id="invalidCheck" required />
                     <label className="form-check-label">I confirm that all data are correct</label>
                 </div>
-                <button id="submit" type="submit" className="btn btn-primary">login</button>
+                <button id="submit" type="submit" className="btn btn-primary" onClick={(e)=>submit(e)}>login</button>
                 
             </form>
         </div>
