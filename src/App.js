@@ -9,10 +9,15 @@ import {
   Route,
 } from 'react-router-dom';
 
+<<<<<<< HEAD
 import Home from './components/Home';
 import Login from './components/Login';
 import Registration from './components/Registration';
 // import NewsApp from './components/NewsApp';
+=======
+
+
+>>>>>>> 931de3b0e6a2b0ee566fc950b4af1a34d6bd1db2
 
 function App() {
   const apiKey = 'd64fdab97ea344518da0ab7cf72bd6a6';
