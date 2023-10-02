@@ -1,8 +1,7 @@
 import {useNavigate} from 'react-router-dom';
 
-import React ,{ useState , useEffect} from 'react';
+import React ,{ useState } from 'react';
 import axios from "axios";
-import { Link } from 'react-router-dom';
 
 
 
@@ -10,9 +9,9 @@ function Login(props){
 
     const navigate = useNavigate();
 
-    const [email,setEmail] = useState();
+    const [email,setEmail] = useState('');
     const[password, setPassword]=useState('');
-
+    const [errorMessage, setErrorMessage] = useState('');
 
    async function submit(e){
     e.preventDefault();
@@ -27,12 +26,16 @@ function Login(props){
           console.log('Navigating to /general');
           navigate('/general');
         }
-        else if(res.data.status==="notexist"){
-          alert('user not exist');
+        else if(res.data.status==="password"){
+
+          setErrorMessage("password are wrong");
+
+        }else if(res.data.status==="notexist"){
+          setErrorMessage("user not found")
         }
       })
       .catch(e=>{
-        alert("wrong detail")
+        setErrorMessage("wrong details");
         console.log(e);
       })
 
@@ -96,6 +99,7 @@ function Login(props){
             </style>
 
             <body>
+            {errorMessage && <div className="error-message">{errorMessage}</div>}
 <div className="form-body">
 <div className="form-holder">
     <div className="form-content">

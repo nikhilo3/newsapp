@@ -1,8 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function Navbar()  {
-        
+function Navbar({onLogout })  {
+  const isLoggedIn = true; // Change this to reflect the user's login status
+
+  const handleLogoutClick = () => {
+    // Call the onLogout function when the Logout button is clicked
+    onLogout();
+  };
     return (
       <>
       <style>
@@ -51,10 +56,20 @@ function Navbar()  {
               <li className="nav-item">
                 <Link className="nav-link" to="/technology">technology</Link>
               </li>
+
+
               
               {/* <Link className="btnl" to="/" style={{ textDecoration: 'none', color: 'white' , marginLeft:'750px'}}>Logout</Link> */}
               
             </ul>
+
+            {isLoggedIn ? (
+              // Display Logout button when logged in
+              <button className="btnl" onClick={handleLogoutClick} style={{color:'white'}}>
+                <Link style={{ textDecoration: 'none', color: '#ddd' }} to="/">Logout</Link>
+              </button>
+            ) 
+            : null}
           </div>
         </div>
       </nav>

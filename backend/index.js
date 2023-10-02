@@ -55,7 +55,7 @@ app.post('/registration', async (req, res) => {
       const existingUser = await registrationform.findOne({ email });
   
       if (existingUser) {
-        return res.status(200).json({ message: 'Email is already registered' });
+        return res.status(409).json({ message: 'Email is already registered' });
       }
   
       const newUser = new registrationform({ name, email, password });
@@ -80,12 +80,15 @@ app.post('/login',async (req,res)=>{
         if (check && check.password === password) {
               console.log('Login successful');
             //   res.redirect('/general');
-            res.json({ status: 'success' });
-            res.status(200).json({ message: 'login successful' });
-        } else {
-            console.log('Login failed');
+            
+            res.status(200).json({ status: 'success' });
+        } else if(check && check.password !== password){
+            console.log('password are wrong');
             // res.send('wrong details');
             // res.json("notexist")
+            res.json({ status: 'password' });
+        }else{
+            console.log('user not exist');
             res.json({ status: 'notexist' });
         }
     } catch (err) {

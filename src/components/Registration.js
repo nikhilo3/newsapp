@@ -33,8 +33,11 @@ function Registration(){
           if (response.status === 200) {
             setRegistrationMessage("your data registration successfully:");
             window.location.href = '/login'; // Redirect to login page upon successful registration
-          } else {
-            setErrorMessage("email already exist:");
+          }else if (response.status === 409) {
+            setErrorMessage("Email is already registered.");
+          }  
+          else {
+            setErrorMessage("Registration failed. Please try again later.");
           }
         } catch (error) {
           console.error('Error during registration:', error);
