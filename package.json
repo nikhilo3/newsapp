@@ -1,5 +1,5 @@
 {
-  "homepage": ".",
+  "homepage": "./src/App.js",
   "name": "newsapp",
   "proxy": "http://localhost:1000",
   "version": "0.1.0",
