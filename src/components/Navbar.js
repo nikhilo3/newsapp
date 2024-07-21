@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+<<<<<<< HEAD
 function Navbar({onLogout })  {
   const isLoggedIn = true; 
 
@@ -31,6 +32,14 @@ function Navbar({onLogout })  {
       <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
         <div className='container-fluid'>
           <Link className="navbar-brand" to="/general">Newsmonkey</Link>
+=======
+function Navbar()  {
+
+    return (
+      <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+        <div className='container-fluid'>
+          <Link className="navbar-brand" to="/">Newsmonkey</Link>
+>>>>>>> 9b336058f774fe3943f4166fd62c3c5fc2010c7f
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
@@ -38,7 +47,11 @@ function Navbar({onLogout })  {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
+<<<<<<< HEAD
                 <Link className="nav-link" to="/general">general</Link>
+=======
+                <Link className="nav-link" to="/">general</Link>
+>>>>>>> 9b336058f774fe3943f4166fd62c3c5fc2010c7f
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/business">business</Link>
@@ -55,6 +68,7 @@ function Navbar({onLogout })  {
               <li className="nav-item">
                 <Link className="nav-link" to="/technology">technology</Link>
               </li>
+<<<<<<< HEAD
 
 
               
@@ -73,6 +87,13 @@ function Navbar({onLogout })  {
       </>
     );
     
+=======
+            </ul>
+          </div>
+        </div>
+      </nav>
+    );
+>>>>>>> 9b336058f774fe3943f4166fd62c3c5fc2010c7f
 }
 
 export default Navbar;
