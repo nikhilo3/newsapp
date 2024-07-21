@@ -17,7 +17,7 @@ function Login(props){
     e.preventDefault();
 
     try {
-      await axios.post("http://localhost:1000/login",{
+      await axios.post("newsapp-api-backend.vercel.app/login",{
         email,password
       })
       .then(res=>{
