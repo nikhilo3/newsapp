@@ -21,7 +21,7 @@ function Registration(){
         e.preventDefault();
     
         try {
-          const response = await fetch('/registration', {
+          const response = await fetch('newsapp-api-backend.vercel.app/registration', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
