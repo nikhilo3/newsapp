@@ -9,14 +9,7 @@ import InfiniteScroll from "react-infinite-scroll-component";
   const [articles,setArticles] = useState([])
   const [loading,setLoading] = useState(true)
   const [totalResults,setTotalResults] = useState(0)
-<<<<<<< HEAD
   const [page,setPage] = useState(1);
-=======
-  const [page,setPage] = useState(1)
-    
-  //  document.title = `NewsMonkey - ${props.category}`
-  // articles = [];
->>>>>>> 9b336058f774fe3943f4166fd62c3c5fc2010c7f
 
  
 

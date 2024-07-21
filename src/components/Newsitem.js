@@ -5,7 +5,6 @@ const Newsitem = (props)=> {
 
     let {title,description,imageUrl,newsUrl,date,source} = props;
     const cardStyle = {
-<<<<<<< HEAD
       width: '320px',
       height: '450px',
       overflow:'hidden'
@@ -16,18 +15,6 @@ const Newsitem = (props)=> {
     };
     const descriptionStyle = {
       height: '90px', 
-=======
-      width: '320px', // Specify the desired width
-      height: '450px', // Specify the desired height
-      overflow:'hidden'
-    };
-    const titleStyle = {
-      height: '50px', // Specify the desired height for the title
-      overflow: 'hidden',
-    };
-    const descriptionStyle = {
-      height: '90px', // Specify the desired height for the description
->>>>>>> 9b336058f774fe3943f4166fd62c3c5fc2010c7f
       overflow: 'hidden',
     };
     return (
