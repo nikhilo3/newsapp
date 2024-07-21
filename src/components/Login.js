@@ -39,23 +39,6 @@ function Login(props){
         console.log(e);
       })
 
-
-      // Make an API request to your Express server to validate credentials
-      // const response = await fetch('/login', {
-      //   method: 'POST',
-      //   headers: {
-      //     'Content-Type': 'application/json',
-      //   },
-      //   body: JSON.stringify({ email, password }),
-      // });
-
-      // if (response.status === 200) {
-      //   // Login successful, navigate to the news page
-      //   navigate('/newsapp');
-      // } else {
-      //   // Login failed, display an error message
-      //   console.log('Login failed');
-      // }
     } catch (error) {
       console.log(error);
     }
@@ -98,7 +81,6 @@ function Login(props){
                 `}
             </style>
 
-            <body>
             {errorMessage && <div className="error-message">{errorMessage}</div>}
 <div className="form-body">
 <div className="form-holder">
@@ -106,7 +88,7 @@ function Login(props){
         <div className="form-items">
             <h3>login</h3>
             <p>Fill in the data below.</p>
-            <form className="requires-validation" novalidate method="POST">
+            <form className="requires-validation" noValidate method="POST">
 
                 <input className="form-control mb-3" type="email" onChange={(e)=>{setEmail(e.target.value)}} name="email" placeholder="E-mail Address" required />
 
@@ -117,7 +99,6 @@ function Login(props){
                     <label className="form-check-label">I confirm that all data are correct</label>
                 </div>
                 <button id="submit" type="submit" className="btn btn-primary" onClick={(e)=>submit(e)}>login</button>
-                
             </form>
         </div>
     </div>
@@ -126,7 +107,6 @@ function Login(props){
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"></script>
 
-</body>
         </>
     );
 }

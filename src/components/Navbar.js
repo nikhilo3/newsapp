@@ -2,10 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 function Navbar({onLogout })  {
-  const isLoggedIn = true; // Change this to reflect the user's login status
+  const isLoggedIn = true; 
 
   const handleLogoutClick = () => {
-    // Call the onLogout function when the Logout button is clicked
     onLogout();
   };
     return (
@@ -31,7 +30,7 @@ function Navbar({onLogout })  {
         </style>
       <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
         <div className='container-fluid'>
-          <Link className="navbar-brand" to="/">Newsmonkey</Link>
+          <Link className="navbar-brand" to="/general">Newsmonkey</Link>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
@@ -59,12 +58,10 @@ function Navbar({onLogout })  {
 
 
               
-              {/* <Link className="btnl" to="/" style={{ textDecoration: 'none', color: 'white' , marginLeft:'750px'}}>Logout</Link> */}
               
             </ul>
 
             {isLoggedIn ? (
-              // Display Logout button when logged in
               <button className="btnl" onClick={handleLogoutClick} style={{color:'white'}}>
                 <Link style={{ textDecoration: 'none', color: '#ddd' }} to="/">Logout</Link>
               </button>

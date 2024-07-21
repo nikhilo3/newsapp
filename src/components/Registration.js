@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-// import { Link } from 'react-router-dom';
 
 
 function Registration(){
@@ -32,7 +31,7 @@ function Registration(){
     
           if (response.status === 200) {
             setRegistrationMessage("your data registration successfully:");
-            window.location.href = '/login'; // Redirect to login page upon successful registration
+            window.location.href = '/login';
           }else if (response.status === 409) {
             setErrorMessage("Email is already registered.");
           }  

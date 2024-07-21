@@ -34,7 +34,6 @@ function Home(){
             padding: 0;
         }
 
-        /* Reset some default styles */
         body,
         h1,
         h2,
@@ -43,7 +42,6 @@ function Home(){
             padding: 0;
         }
 
-        /* Header Styles */
         header {
             background-color: #333;
             color: #fff;
@@ -54,13 +52,11 @@ function Home(){
             align-items: center;
         }
 
-        /* Logo Styles */
         .logo {
             font-size: 24px;
             font-weight: bold;
         }
 
-        /* Login and Registration Button Styles */
         .btn-container {
             display: flex;
         }
@@ -79,7 +75,6 @@ function Home(){
             background-color: #c00;
         }
 
-        /* Main Content Styles */
         .container {
             max-width: 100%;
             margin: 0 auto;
@@ -89,7 +84,6 @@ function Home(){
             justify-content: space-between;
         }
 
-        /* News Heading Styles */
         .news-heading {
             text-align: center;
             font-size: 36px;
@@ -98,7 +92,6 @@ function Home(){
             width: 100%;
         }
 
-        /* News Description Styles */
         .news-description {
             text-align: center;
             font-size: 18px;
@@ -107,7 +100,6 @@ function Home(){
             width: 100%;
         }
 
-        /* Card Styles */
         .card {
             width: calc(33.33% - 20px);
             margin-bottom: 20px;
@@ -117,22 +109,17 @@ function Home(){
             display: flex;
             flex-direction: column;
             height: 100%;
-            /* Constrain card height */
             transition: transform 0.3s ease-in-out;
-            /* Transition for animation */
         }
 
         .card:hover {
             transform: scale(1.1);
-            /* Scale up the card on hover */
         }
 
         .card-content {
             padding: 10px;
             background-color: rgba(255, 255, 255, 0.7);
-            /* Card content background color */
             flex-grow: 1;
-            /* Allow content to grow and occupy remaining space */
         }
 
         .card-category {
@@ -145,7 +132,6 @@ function Home(){
             margin-top: 10px;
         }
         
-        /* Background Images for Cards */
         .card.card1 {
             background-image: url('${card1}');
             background-size: cover;
@@ -170,7 +156,6 @@ function Home(){
             /* Adjust the height as needed */
         }
 
-        /* Top Stories Section Styles */
         .top-stories {
             width: 45%;
             /* Adjust the width of the Top Stories section */
@@ -223,28 +208,24 @@ function Home(){
         }
         .top-story-image3 {
             width: 40%;
-            /* Set the width for the image */
             background-image: url('${story3}');
             background-size: cover;
             background-position: center;
         }
         .top-story-image4 {
             width: 40%;
-            /* Set the width for the image */
             background-image: url('${story4}');
             background-size: cover;
             background-position: center;
         }
         .top-story-image5 {
             width: 40%;
-            /* Set the width for the image */
             background-image: url('${story5}');
             background-size: cover;
             background-position: center;
         }
         .top-story-image6 {
             width: 40%;
-            /* Set the width for the image */
             background-image: url('${story6}');
             background-size: cover;
             background-position: center;
@@ -252,7 +233,6 @@ function Home(){
 
         .top-story-content {
             width: 60%;
-            /* Set the width for the content */
             padding: 10px;
             display: flex;
             flex-direction: column;
@@ -268,12 +248,9 @@ function Home(){
             color: #555;
         }
 
-        /* Top News Section Styles */
         .top-news {
             margin-top: 60px;
             width: 50%;
-            /* height: px; */
-            /* Adjust the width of the Top Stories section */
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -296,33 +273,27 @@ function Home(){
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
             display: flex;
             flex-direction: row;
-            /* Display content in a row */
             transition: transform 0.3s ease-in-out;
-            /* Transition for animation */
         }
 
         .top-news-card:hover {
             transform: scale(1.07);
-            /* Scale up the card on hover */
         }
 
         .top-news-image1 {
             width: 40%;
-            /* Set the width for the image */
             background-image: url('${news1}');
             background-size: cover;
             background-position: center;
         }
         .top-news-image2 {
             width: 40%;
-            /* Set the width for the image */
             background-image: url('${news2}');
             background-size: cover;
             background-position: center;
         }
         .top-news-image3 {
             width: 40%;
-            /* Set the width for the image */
             background-image: url('${news3}');
             background-size: cover;
             background-position: center;
@@ -330,7 +301,6 @@ function Home(){
 
         .top-news-content {
             width: 60%;
-            /* Set the width for the content */
             padding: 10px;
             display: flex;
             flex-direction: column;
@@ -346,7 +316,6 @@ function Home(){
             color: #555;
         }
 
-        /* "See All" Link Styles */
         .see-all-link {
             color: black;
             text-decoration: none;
@@ -356,28 +325,79 @@ function Home(){
 
         .see-all-link:hover {
             color: rgb(21, 0, 128);
-            /* Change color on hover */
             text-decoration: underline;
         }
 
-        /* Footer Styles */
         footer {
             background-color: #333;
             color: #fff;
+            padding: 20px 0;
             text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+            transition: background-color 0.3s ease-in-out;
         }
+        
+        .footer-logo {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            transition: color 0.3s ease-in-out;
+        }
+        
+        .footer-sections {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 20px;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .footer-section {
+            flex: 1;
+            padding: 10px;
+            text-align: left;
+        }
+        
+        .contact-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 16px;
+        }
+        
+        .contact-table td {
+            padding: 10px 0;
+        }
+        
+        .about-us-text {
+            font-size: 16px;
+            text-align: left;
+        }
+        
+        .footer-copyright {
+            font-size: 20px;
+            margin-top: 20px;
+            transition: color 0.3s ease-in-out;
+        }
+        
+        footer:hover {
+            background-color: #222; 
+        }
+        
+        .footer-logo:hover {
+            color: #ff5722; 
+        }
+        
+        .footer-copyright:hover {
+            color: #ff5722; 
+        }
+        
 
-        /* Add this CSS to your existing styles */
 
-/* Continuous Images Section Styles */
 .continuous-images {
     text-align: center;
     margin-top: 20px;
-    overflow: hidden; /* Hide overflow for the continuous scroll effect */
+    overflow: hidden; 
     margin-bottom: 50px;
 }
 
@@ -388,16 +408,16 @@ function Home(){
 }
 
 .image-container {
-    white-space: nowrap; /* Keep images in a single line */
-    animation: scrollImages 20s linear infinite; /* Define the animation for continuous scrolling */
+    white-space: nowrap; 
+    animation: scrollImages 20s linear infinite;
     height: auto;
 }
 
 .image-item {
-    display: inline-block; /* Display images in a single line */
-    width: 250px; /* Adjust the width of each image container as needed */
+    display: inline-block; 
+    width: 250px; 
     text-align: center;
-    margin-right: 20px; /* Adjust the spacing between images */
+    margin-right: 20px; 
     border: 1px solid #ddd;
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
@@ -423,19 +443,17 @@ function Home(){
     border-bottom-right-radius: 5px;
 }
 
-/* Apply hover effect to image items */
 .image-item:hover {
     transform: scale(1.05);
 }
 
-/* Keyframes animation for continuous scrolling */
-/* Updated Keyframes animation for continuous scrolling */
+
 @keyframes scrollImages {
     0% {
-        transform: translateX(5%); /* Start from the center */
+        transform: translateX(5%); /* Start from */
     }
     100% {
-        transform: translateX(calc(-30% - 20px)); /* End at the center with spacing */
+        transform: translateX(calc(-30% - 20px)); /* End at */
     }
 }
 `}
@@ -475,7 +493,7 @@ function Home(){
         </div>
       
         <div className="top-stories">
-            <div className="top-stories-heading">Top Stories <a href="/" className="see-all-link">See All &gt;&gt;&gt;</a></div>
+            <div className="top-stories-heading">Top Stories <Link to="/login" className="see-all-link">See All &gt;&gt;&gt;</Link></div>
            
             <div className="top-story-card">
                 <div className="top-story-image1"></div>
@@ -530,7 +548,7 @@ function Home(){
         </div>
    
         <div className="top-news">
-            <div className="top-news-heading">Top News <a href="/" className="see-all-link">See All &gt;&gt;&gt;</a></div>
+            <div className="top-news-heading">Top News <Link to="/login" className="see-all-link">See All &gt;&gt;&gt;</Link></div>
         
             <div className="top-news-card">
                 <div className="top-news-image1"></div>
@@ -597,8 +615,36 @@ function Home(){
 
     </div>
     <footer>
-        &copy; 2023 News Website
-    </footer>
+            <div className="footer-logo">
+                <img src="https://www.brandbucket.com/sites/default/files/logo_uploads/286826/large_newsmonkeys.png" width="200" alt="logo" />
+            </div>
+            <div className="footer-sections">
+                <div className="footer-section">
+                    <h3>Contact Us</h3>
+                    <table className="contact-table">
+                        <tbody>
+                            <tr>
+                                <td>Phone:</td>
+                                <td>+1 (123) 456-7890</td>
+                            </tr>
+                            <tr>
+                                <td>Email:</td>
+                                <td>contact@newsmonkey.com</td>
+                            </tr>
+                            <tr>
+                                <td>Address:</td>
+                                <td>123 News Street, City</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div className="footer-section">
+                    <h3>About Us</h3>
+                    <p className="about-us-text">We are NewsMonkey, your source for the latest news from around the world. Our website features a wide range of news categories to keep you informed.</p>
+                </div>
+            </div>
+            <div className="footer-copyright">&copy; 2023 News Website</div>
+        </footer>
 
 
         </>
