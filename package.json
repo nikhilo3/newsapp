@@ -1,5 +1,4 @@
 {
-  "homepage": "https://nikhilo3.github.io/newsapp",
   "name": "newsapp",
   "proxy": "http://localhost:1000",
   "version": "0.1.0",
